@@ -1,8 +1,10 @@
 package tr.gov.hmb.LinkConverter.service.deepLink;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import tr.gov.hmb.LinkConverter.constants.Constants;
+import tr.gov.hmb.LinkConverter.service.webLink.ILinkConverter;
 
 import java.util.List;
 
@@ -10,7 +12,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class DeepLinkConverterFactory {
 
-    private final List<IDeepLinkConverter> linkConverters;
+    @Autowired
+    private List<IDeepLinkConverter> linkConverters;
 
     public String convertLink(String deepLink) {
 

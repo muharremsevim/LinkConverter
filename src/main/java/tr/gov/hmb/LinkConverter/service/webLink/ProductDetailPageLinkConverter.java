@@ -41,8 +41,8 @@ public class ProductDetailPageLinkConverter extends AbstractConverter implements
             if (map.keySet().contains(Constants.BRANCH)) {
                 deepLink = deepLink.concat("&CampaignId=").concat(map.get(Constants.BRANCH));
             }
-            if (map.keySet().contains(Constants.TEAM_ID)) {
-                deepLink = deepLink.concat("&TeamId=").concat(map.get(Constants.TEAM_ID));
+            if (map.keySet().contains(Constants.TEAMID)) {
+                deepLink = deepLink.concat("&TeamId=").concat(map.get(Constants.TEAMID));
             } else {
                 if (map.keySet().contains(Constants.BRANCH)) {
                     page = Constants.PRODUCT;
