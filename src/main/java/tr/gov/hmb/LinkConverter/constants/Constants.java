@@ -27,4 +27,5 @@ public class Constants {
     public static final String CAMPAIGN_ID = "CampaignId";
     public static final String TEAM_ID = "TeamId";
     public static final String CONTENT_ID = "ContentId";
+    public static final String QUERY = "Query";
 }
