@@ -1,0 +1,21 @@
+#version: '1'
+
+services:
+  link-converter:
+    image: link-converter
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=linkconverter
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+

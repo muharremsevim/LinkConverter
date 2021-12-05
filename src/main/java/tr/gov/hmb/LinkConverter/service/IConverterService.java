@@ -1,4 +1,4 @@
-package com.hmb.LinkConverter.service;
+package tr.gov.hmb.LinkConverter.service;
 
 import org.springframework.stereotype.Service;
 
