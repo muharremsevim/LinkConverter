@@ -1,4 +1,4 @@
-package tr.gov.hmb.LinkConverter.service.deepLink;
+package tr.gov.hmb.LinkConverter.service.webLink;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,20 +10,19 @@ import static tr.gov.hmb.LinkConverter.constants.TestConstants.TEST_DL_1;
 import static tr.gov.hmb.LinkConverter.constants.TestConstants.TEST_URL_1;
 
 @RunWith(MockitoJUnitRunner.class)
-public class ProductDetailPageDeepLinkConverterTest {
-
+public class ProductDetailPageLinkConverterTest {
     @InjectMocks
-    private ProductDetailPageDeepLinkConverter productDetailPageDeepLinkConverter;
+    private ProductDetailPageLinkConverter productDetailPageLinkConverter;
 
     @Test
     public void checkProductDetailPageTrue() throws Exception {
-        var isChecked = productDetailPageDeepLinkConverter.check(TEST_DL_1);
+        var isChecked = productDetailPageLinkConverter.check(TEST_URL_1);
         assertThat(isChecked).isEqualTo(true);
     }
 
     @Test
-    public void checkProductDetailPageLinkTrue() throws Exception {
-        var url = productDetailPageDeepLinkConverter.createLink(TEST_DL_1);
-        assertThat(url).isEqualTo(TEST_URL_1);
+    public void checkProductDetailPageUrlTrue() throws Exception {
+        var url = productDetailPageLinkConverter.createLink(TEST_URL_1);
+        assertThat(url).isEqualTo(TEST_DL_1);
     }
 }
