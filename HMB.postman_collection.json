@@ -1,0 +1,113 @@
+{
+	"variables": [],
+	"info": {
+		"name": "HMB",
+		"_postman_id": "1d369807-9738-85da-d127-ff4258007157",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UrlToDeepLink",
+			"request": {
+				"url": "http://localhost:8080/api/links/urlToDeeplink",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "url",
+							"value": "https://www.hmb.gov.tr/btgm-p-1001?branch=439",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "url",
+							"value": "https://www.hmb.gov.tr/sr?q=abc",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "url",
+							"value": "https://www.hmb.gov.tr/btgm-p-1001?teamId=1050",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "url",
+							"value": "https://www.hmb.gov.tr/btgm-p-1001?branch=439&teamId=1050",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DeepLinkToUrl",
+			"request": {
+				"url": "http://localhost:8080/api/links/deeplinkToUrl",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "deepLink",
+							"value": "ty://?Page=Unit&ContentId=1001&CampaignId=439&TeamId=1050",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "deepLink",
+							"value": "ty://?Page=Unit&ContentId=1001",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "deepLink",
+							"value": "ty://?Page=Unit&ContentId=1001&CampaignId=439",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "deepLink",
+							"value": "ty://?Page=Product&ContentId=1001&TeamId=1050",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "deepLink",
+							"value": "ty://?Page=Search&Query=muharrem",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "ping",
+			"request": {
+				"url": "http://localhost:8080/api/links/ping",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
